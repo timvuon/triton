@@ -44,11 +44,7 @@ stdenv.mkDerivation {
   ];
 
   patches = [
-    (fetchTritonPatch {
-      rev = "e79f57c34a7ab32d39c29c066c59be0f20ea249a";
-      file = "r/rust/0001-debuginfo-Remove-nix-build-dir-impurities.patch";
-      sha256 = "b59d53bb95bd4a31b4c8b33d14f20d930320f7b7470daff589ec150bd1cc7578";
-    })
+    ../../../../../triton-patches/r/rust/0001-debuginfo-Remove-nix-build-dir-impurities.patch
   ];
 
   postPatch = ''
